@@ -1,0 +1,38 @@
+<!-- include header file -->
+<%-include('./partials/header.ejs') %>
+ 
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 mt-5 ">
+            <h2 class="alert alert-success text-center" role="alert">Update Student</h2>
+            <!-- Form -->
+            <form method="POST" action="/student/update/<%= data._id %>">
+
+                <!-- Name -->
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="name" name="name" value="<%= data.name %>">
+                </div>
+                
+                 <!-- Age -->
+                 <div class="mb-3">
+                    <label for="age" class="form-label">Age</label>
+                    <input type="text" class="form-control" id="age" name="age" value="<%= data.age %>">
+                  </div>
+
+                    <!-- Fees -->
+                 <div class="mb-3">
+                    <label for="fees" class="form-label">Fees</label>
+                    <input type="text" class="form-control" id="fees" name="fees" value="<%= data.fees %>">
+                  </div>
+
+                <button type="submit" class="btn btn-primary">Update</button>
+                <button type="submit" class="btn btn-secondry">Back To Home</button>
+              </form>
+        </div>
+    </div>
+</div>
+
+
+ <!-- include footer -->
+ <%-include('./partials/footer.ejs') %>
